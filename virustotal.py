@@ -17,7 +17,6 @@ class Virustotal():
 		self.base = "https://www.virustotal.com/vtapi/v2/"
 		self.apikey = "Your Virustotal APIKEY"
 
-
 	def rscReport(self, rsc):
 		""" Get latest report of resource """
 
@@ -38,14 +37,13 @@ class Virustotal():
 		results = parse_resp(resp)
 		return results
 
-	# ipReport()/domainReport() both return 404 / Errors related to get to the API
 	def ipReport(self, rsc):
 		""" Get latest report for IP Address """
 
 		base = self.base + 'ip-address/report'
 		parameters = {"ip":rsc, "apikey":self.apikey}
-		r = requests.get(base, data=parameters)
-		resp = r.text
+		r = requests.get(base, params=parameters)
+		resp = r.json()
 		results = parse_resp(resp)
 		return results
 
@@ -54,12 +52,11 @@ class Virustotal():
 
 		base = self.base + 'domain/report'
 		parameters = {"domain":rsc, "apikey":self.apikey}
-		r = requests.post(base, data=parameters)
-		resp = r.text
+		r = requests.get(base, params=parameters)
+		resp = r.json()
 		results = parse_resp(resp)
 		return results
 		
-
 	def scanURL(self, rsc):
 
 		""" Send RSC/URL for scanning; Its encouraged to check for last scanusing urlReport()
