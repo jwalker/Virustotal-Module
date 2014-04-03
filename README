@@ -1,0 +1,8 @@
+Virustotal Module
+
+The Virustotal is an API module for the Virustotal.com's
+Public API.
+
+A few of the public API functions have been implemented
+in this module and the missing are currently in progess
+of being committed 
