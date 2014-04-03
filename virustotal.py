@@ -1,4 +1,4 @@
-# Simple virustotal module
+# Virustotal Module
 # Jacolon walker
 #
 # Below are Virustotal.com's API keys (for k:v responses)
