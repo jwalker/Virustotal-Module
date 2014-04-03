@@ -15,7 +15,7 @@ class Virustotal():
 	def __init__(self):
 		self.host = "www.virustotal.com"
 		self.base = "https://www.virustotal.com/vtapi/v2/"
-		self.apikey = "VT API KEY HERE"
+		self.apikey = "435e55fcc864a1b74457ae08c7415b096deeb82c445d6d19092f4e29a7ec1a87"
 
 	def rscReport(self, rsc):
 		""" Get latest report of resource """
@@ -43,7 +43,7 @@ class Virustotal():
 
 		return buf
 
-	# IP and Domain Report both return 404 / Errors related to get to the API
+	# ipReport()/domainReport() both return 404 / Errors related to get to the API
 	def ipReport(self, rsc):
 		""" Get latest report for IP Address """
 
@@ -78,4 +78,7 @@ class Virustotal():
 			buf[item] = resp[item]
 
 		return buf
+
+	def rscSubmit(self, rsc):
+		pass
 
