@@ -22,30 +22,11 @@ do.
 ## Usage
 ```python
 >>> # Grab latest report of HASH and only pull certain values
-... from virustotal import *
-rsc = "9c064772651a14ca8936d02d98f843ed" # Hash of resource to look up
-
-v = Virustotal()
-results = v.rscReport(rsc)
-buf = []
-for item in results:
-        if item == "resource":
-                print "Grabbing last submitted report for:", results[item]
-        if item == "permalink":
-                print "Report link:", results[item]
+>>> from virustotal import *
 >>> rsc = "9c064772651a14ca8936d02d98f843ed" # Hash of resource to look up
 >>>
 >>> v = Virustotal()
 >>> results = v.rscReport(rsc)
-        if item == "md5":
-                print "md5sum:", results[item]
-        if item == "scan_date":
-                print  "Last scanned:", results[item]
-        if item == "positives":
-                print "Positive hits:", results[item]
-        if item == "total":
-                print "Total AVs tested:", results[item]
->>> buf = []
 >>> for item in results:
 ...         if item == "resource":
 ...                 print "Grabbing last submitted report for:", results[item]
