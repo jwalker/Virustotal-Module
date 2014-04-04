@@ -4,7 +4,7 @@ The Virustotal module is a python API module for the Virustotal.com's Public API
 
 Prerequisites:
 	json - default module with python
-	python requests module - http://docs.python-requests.org/en/latest/
+	python requests module - [http://docs.python-requests.org/en/latest/]
 
 This module can be used to upload, scan, submit, comment and grab reports from the
 Virustotal's public API. Special thing about this module is, that you are giving the
@@ -19,8 +19,8 @@ http://virustotal.com
 So without further adie, I will present a few simple functions that the module can
 do.
 
-### Usage
-```
+## Usage
+```python
 >>> # Grab latest report of HASH and only pull certain values
 ... from virustotal import *
 rsc = "9c064772651a14ca8936d02d98f843ed" # Hash of resource to look up
