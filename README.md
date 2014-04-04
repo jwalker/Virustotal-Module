@@ -20,6 +20,7 @@ So without further adie, I will present a few simple functions that the module c
 perform.
 
 ## Usage:
+### Grab latest report
 ```python
 >>> # Grab latest report of HASH and only pull certain values
 >>> from virustotal import *
@@ -49,4 +50,14 @@ Positive hits: 48
 md5sum: 9c064772651a14ca8936d02d98f843ed
 ```
 
-
+### Post comment
+```python
+>>> # Post comment about resource
+... from virustotal import *
+>>> rsc = "9c064772651a14ca8936d02d98f843ed" # Hash of resource to post comment about
+>>> comment = "Captured with #honeypot #dionaea"
+>>> v = Virustotal()
+>>> results = v.postComment(rsc, comment)
+Your comment was successfully posted
+Report link: https://www.virustotal.com/file/b7ab5bcd4edfd8ac7be17dd0650e01c4d519814784609851be9b2df571e501f3/analysis/1396511495/
+```
