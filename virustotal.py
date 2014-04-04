@@ -15,7 +15,8 @@ class Virustotal():
 	def __init__(self):
 		self.host = "www.virustotal.com"
 		self.base = "https://www.virustotal.com/vtapi/v2/"
-		self.apikey = "Your Virustotal APIKEY"
+		self.apikey = "435e55fcc864a1b74457ae08c7415b096deeb82c445d6d19092f4e29a7ec1a87"
+		#self.apikey = "Your Virustotal APIKEY"
 
 	def rscReport(self, rsc):
 		""" Get latest report of resource """
