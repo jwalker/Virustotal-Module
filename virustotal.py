@@ -15,8 +15,7 @@ class Virustotal():
 	def __init__(self):
 		self.host = "www.virustotal.com"
 		self.base = "https://www.virustotal.com/vtapi/v2/"
-		self.apikey = "435e55fcc864a1b74457ae08c7415b096deeb82c445d6d19092f4e29a7ec1a87"
-		#self.apikey = "Your Virustotal APIKEY"
+		self.apikey = "Your Virustotal APIKEY"
 
 	def rscReport(self, rsc):
 		""" Get latest report of resource """
@@ -90,6 +89,23 @@ class Virustotal():
 		resp = r.json()
 		results = parse_resp(resp)
 		return results
+
+	def postComment(self, rsc, comment):
+
+		""" Post comment to files or urls """
+		base = self.base + 'comments/put'
+		parameters = {"resource":rsc, "comment":comment, "apikey":self.apikey}
+		r = requests.post(base, data=parameters)
+		resp = r.json()
+		results = parse_resp(resp)
+		if results['response_code'] == 0:
+			print "Oh no something happen...cant post comment"
+		else:
+			print "Your comment was successfully posted"
+			call = self.rscReport(rsc)
+			for item in call:
+				if item == "permalink":
+					print "Report link:", call[item]
 
 
 def parse_resp(resp):
