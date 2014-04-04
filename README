@@ -19,7 +19,7 @@ http://virustotal.com
 So without further adie, I will present a few simple functions that the module can
 do.
 
-### Get last report of resource (hash) and only certain fields
+### Usage
 ```
 >>> # Grab latest report of HASH and only pull certain values
 ... from virustotal import *
