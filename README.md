@@ -61,3 +61,29 @@ md5sum: 9c064772651a14ca8936d02d98f843ed
 Your comment was successfully posted
 Report link: https://www.virustotal.com/file/b7ab5bcd4edfd8ac7be17dd0650e01c4d519814784609851be9b2df571e501f3/analysis/1396511495/
 ```
+
+### Get URL report or submit for scan
+```python
+>>> # Check domain for report if no results submit it for a scan
+>>> v = Virustotal()
+>>> dchk = v.domainReport(rsc)
+>>> if dchk["response_code"] == 0:
+...         print "No dataset found for %s" %(rsc)
+...         print "Running scan for resource..."
+...         results = v.scanURL(rsc)
+...         for item in results:
+...                 if item == "permalink":
+...                         print "Check link below for results:"
+...                         print results[item]
+... else:
+...         for item in dchk:
+...                 if item == "scan_date":
+...                         print "Last scanned:", dchk[item]
+...                 if item == "permalink":
+...                         print "Results link:", dchk[item]
+...
+No dataset found for www.norcaljazzfestival.com
+Running scan for resource...
+Check link below for results:
+https://www.virustotal.com/url/d5a5c2532462ed8dda2324f1967916dc4c5c1aa828dce4c5cd7459c8084f7084/analysis/1396592916/
+```
