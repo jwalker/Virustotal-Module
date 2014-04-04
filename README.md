@@ -7,19 +7,19 @@ Prerequisites:
 - python requests module - http://docs.python-requests.org/en/latest/
 
 This module can be used to upload, scan, submit, comment and grab reports from the
-Virustotals public API. Special thing about this module is, that you are giving the
+Virustotals public API. Special thing about this module is, you are giving the
 user full control on how to present the return results as well as it being cross
 compatible.
 
 In the virustotal.py, be sure to insert you Virustotal APIKEY in order to query
-their API. If you do not have a key, you can register at their site for one.
+API. If you do not have a key, you can register for one at the site below.
 
 http://virustotal.com
 
 So without further adie, I will present a few simple functions that the module can
-do.
+perform.
 
-## Usage
+## Usage:
 ```python
 >>> # Grab latest report of HASH and only pull certain values
 >>> from virustotal import *
@@ -48,4 +48,5 @@ Total AVs tested: 50
 Positive hits: 48
 md5sum: 9c064772651a14ca8936d02d98f843ed
 ```
+
 
