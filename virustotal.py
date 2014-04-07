@@ -1,11 +1,12 @@
 # Virustotal Module
-# Jacolon walker
 #
-# Below are Virustotal.com's API options/tags (for k:v responses)
+# Below are a Virustotal.com's API options/tags (for k:v responses)
 # response_code, verbose_msg
 # resource, scan_id, md5, sha1, sha256
 # scan_date
 # scans
+
+__author__ = 'Jacolon Walker'
 
 import requests
 import json
