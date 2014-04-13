@@ -11,8 +11,8 @@ Virustotals public API. Special thing about this module is, you are giving the
 user full control on how to present the return results as well as it being cross
 compatible.
 
-In the virustotal.py, be sure to insert you Virustotal APIKEY in order to query
-API. If you do not have a key, you can register for one at the site below.
+In the virustotal.py, be sure to insert your Virustotal APIKEY in order to query
+the API. If you do not have a key, you can register for one at the site below.
 
 http://virustotal.com
 
